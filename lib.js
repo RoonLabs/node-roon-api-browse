@@ -8,14 +8,6 @@ function RoonApiBrowse(core) {
 
 RoonApiBrowse.services = [ { name: SVCNAME } ];
 
-RoonApiBrowse.prototype.begin = function(opts, cb) {
-    this.core.moo.send_request(SVCNAME+"/begin",
-                               opts,
-                               (msg, body) => {
-                                   if (cb)
-                                       cb(msg && msg.name == "Success" ? false : (msg ? msg.name : "NetworkError"), body);
-                               });
-};
 RoonApiBrowse.prototype.browse = function(opts, cb) {
     this.core.moo.send_request(SVCNAME+"/browse",
                                opts,
