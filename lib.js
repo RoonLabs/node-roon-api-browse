@@ -16,6 +16,7 @@ RoonApiBrowse.prototype.browse = function(opts, cb) {
                                        cb(msg && msg.name == "Success" ? false : (msg ? msg.name : "NetworkError"), body);
                                });
 };
+
 RoonApiBrowse.prototype.load = function(opts, cb) {
     this.core.moo.send_request(SVCNAME+"/load",
                                opts,
@@ -24,6 +25,7 @@ RoonApiBrowse.prototype.load = function(opts, cb) {
                                        cb(msg && msg.name == "Success" ? false : (msg ? msg.name : "NetworkError"), body);
                                });
 };
+
 RoonApiBrowse.prototype.pop_all = function(opts, cb) {
     this.core.moo.send_request(SVCNAME+"/pop_all",
                                opts,
@@ -31,14 +33,14 @@ RoonApiBrowse.prototype.pop_all = function(opts, cb) {
                                    if (cb)
                                        cb(msg && msg.name == "Success" ? false : (msg ? msg.name : "NetworkError"), body);
                                });
-RoonApiBrowse.prototype.pop= function(opts, cb) {
+
+RoonApiBrowse.prototype.pop = function(opts, cb) {
     this.core.moo.send_request(SVCNAME+"/pop",
                                opts,
                                (msg, body) => {
                                    if (cb)
                                        cb(msg && msg.name == "Success" ? false : (msg ? msg.name : "NetworkError"), body);
                                });
-};
 };
 
 exports = module.exports = RoonApiBrowse;
