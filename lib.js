@@ -33,6 +33,7 @@ RoonApiBrowse.prototype.pop_all = function(opts, cb) {
                                    if (cb)
                                        cb(msg && msg.name == "Success" ? false : (msg ? msg.name : "NetworkError"), body);
                                });
+};
 
 RoonApiBrowse.prototype.pop = function(opts, cb) {
     this.core.moo.send_request(SVCNAME+"/pop",
