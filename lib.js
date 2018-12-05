@@ -101,6 +101,8 @@
  *
  * <p>Levels are numbered starting from 0 (the top level). The level number increases as the user "drills down".</p>
  * 
+ * <p>An example application showing how to use the browse service is available here: {@link https://github.com/roonlabs/roon-extension-web-testapp test web app}
+ *
  * @class RoonApiBrowse
  * @param {Core} core - The Core providing the service
  */
